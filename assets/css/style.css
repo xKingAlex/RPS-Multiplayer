@@ -1,0 +1,78 @@
+/* Join Game Page */
+html, body{
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+    font-size: 30px;
+}
+
+hr{
+    width: 300px;
+}
+
+.container-fluid{
+    background-color: yellow;
+    height: 100%;   
+}
+
+.join-img-section{
+    background-color: tomato;
+    height: 100%;
+    padding: 135px 0;
+}
+
+.join-game-section{
+    background-color: white;
+    padding: 150px 0;
+}
+
+.gameStatus{
+    font-size: 30px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.player1Area{
+    height: 200px;
+    border: 2px solid black;
+}
+
+.player2Area{
+    height: 200px;
+    border: 2px solid black;
+}
+
+.fit-screen{
+    height: 100%;
+}
+
+.player-info{
+    margin-top: 150px;
+}
+
+#playerNickname{
+    width: 325px;
+    margin: 0 auto;
+}
+
+.join-game-btn{
+    margin-top: 20px;
+    width: 200px;
+    background-color: tomato;
+    color: white;
+}
+
+.join-game-btn:hover{
+    background-color: darkred;
+}
+
+.gameOpenText{
+    color: green;
+}
+
+.gameFullText{
+    color: tomato;
+}
+
+/* main game page */

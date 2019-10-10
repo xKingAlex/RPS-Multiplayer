@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom File-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row fit-screen">
+        <div class="col-md-6 join-img-section text-center">
+            <img src="./assets/rps-images.png" class="join-img" alt="rps" />
+        </div>
+
+        <div class="col-md-6 join-game-section">
+            <div class="text-center">
+                <h1>Game Status: </h1>
+                <hr>
+                <p class="gameStatus">Game is <span class="gameStatus" id="gameStatusText"></span></p>
+                <p><span id="numPlayersInGame"></span>/2</p>
+
+                <div class="player-info form-group text-center">
+                    <p>Enter Nickname:</p>
+                    <input type="text" class="form-control text-center" id="playerNickname" placeholder="name">
+                    <button class="btn join-game-btn" onclick="joinGame()">Join Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Firebase References -->
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./assets/javascript/join.js"></script>
+
+</html>
