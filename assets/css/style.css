@@ -111,3 +111,11 @@ hr{
     display: none;
 }
 
+.btn-secondary{
+    background-color: tomato;
+}
+
+.btn-secondary:hover{
+    background-color: darkred;
+}
+

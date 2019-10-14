@@ -31,6 +31,7 @@
             <div class="col-md-4 text-center second-color">
                 <div class="container">
                     <h1 class="mt-3" id="player1Name">Player 1</h1>
+                    <p>(Player 1)</p>
                     <hr>
 
                     <div id="p1-buttons">
@@ -42,6 +43,9 @@
                             Scissors</button>
                     </div>
 
+                    <p>Wins:<span id="p1Wins">0</span> Losses:<span id="p1Losses">0</span></p>
+
+                    <button class="btn btn-secondary mb-3" id="player1QuitBtn">Quit Game</button>
                 </div>
             </div>
             <div class="col-md-4 second-color">
@@ -77,10 +81,11 @@
                     </div>
                 </div>
 
-                <div id="roundResults" class="hide py-5 my-5">
+                <div id="roundResults" class="hide py-3 my-3">
                     <div class="row py-5 my-5">
-                        <div class="col-md-12 my-auto">
-                            <h1 class="text-center"><i id="player1Selection"></i> VS. <i id="player2Selection"></i></h1>
+                        <div class="col-md-12 my-auto text-center">
+                            <h1><i id="player1Selection"></i> VS. <i id="player2Selection"></i></h1>
+                            <h1 id="whoWonText"></h1>
                         </div>
                     </div>
                 </div>
@@ -89,6 +94,7 @@
             <div class="col-md-4 text-center second-color">
                 <div class="container">
                     <h1 class="mt-3" id="player2Name">Player 2</h1>
+                    <p>(Player 2)</p>
                     <hr>
 
                     <div id="p2-buttons">
@@ -100,6 +106,9 @@
                             Scissors</button>
                     </div>
 
+                    <p>Wins:<span id="p2Wins">0</span> Losses:<span id="p2Losses">0</span></p>
+
+                    <button class="btn btn-secondary mb-3" id="player2QuitBtn">Quit Game</button>
                 </div>
             </div>
 
