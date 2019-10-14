@@ -115,5 +115,7 @@ function joinGame() {
 function switchPage(){
 
     //!!!! TESTING
-    document.location.href = "file:///C:/Users/Alexj/Documents/Code/KU-EDW-FSF-PT-08-2019-U-C/07-firebase/02-Homework/RPS-Multiplayer/main.html"
+    // document.location.href = "file:///C:/Users/Alexj/Documents/Code/KU-EDW-FSF-PT-08-2019-U-C/07-firebase/02-Homework/RPS-Multiplayer/main.html"
+
+    document.location.href = "https://xkingalex.github.io/RPS-Multiplayer/main.html";
 }
