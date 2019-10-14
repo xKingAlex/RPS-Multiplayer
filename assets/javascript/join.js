@@ -23,6 +23,8 @@ var playerTwo = "";
 var playerRef = "/players";
 
 $(document).ready(function () {
+    localStorage.clear();
+
     database.ref(playerRef).on('value', function (data) {
         playerOne = data.val().PlayerOne;
         playerTwo = data.val().PlayerTwo;
@@ -78,21 +80,40 @@ function joinGame() {
         if (playerOneExists === false) {
             console.log("Joined as p1");
 
+            localStorage.setItem("isPlayerOne", true);
+            localStorage.setItem("isPlayerTwo", false);
+
             database.ref(playerRef).set({
                 PlayerOne: nickname,
                 PlayerTwo: playerTwo
             })
+
+            switchPage();
         }
         else if (playerTwoExists === false) {
             console.log("Joined as p2");
+
+            localStorage.setItem("isPlayerOne", false);
+            localStorage.setItem("isPlayerTwo", true);
 
             database.ref(playerRef).set({
                 PlayerOne: playerOne,
                 PlayerTwo: nickname
             })
+
+            switchPage();
         }
         else {
+            localStorage.setItem("isPlayerOne", false);
+            localStorage.setItem("isPlayerTwo", false);
+
             console.log("sorry game is full");
         }
     }
+}
+
+function switchPage(){
+
+    //!!!! TESTING
+    document.location.href = "file:///C:/Users/Alexj/Documents/Code/KU-EDW-FSF-PT-08-2019-U-C/07-firebase/02-Homework/RPS-Multiplayer/main.html"
 }

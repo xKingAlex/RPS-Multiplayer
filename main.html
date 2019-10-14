@@ -9,27 +9,109 @@
 
     <!-- Bootstrap File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Font-Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/51f69d4274.js" crossorigin="anonymous"></script>
+
     <!-- Custom File-->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="container">
-        <div class="row mt-5">
-            <div class="text-center col-md-6">
-                <div class="mr-2 player1Area">
-
-                </div>
-            </div>
-            <div class="text-center col-md-6">
-                <div class="ml-2 player2Area">
-
-                </div>
-            </div>
+        <div class="jumbotron main-header text-center mt-3">
+            <h1 class="display-4">Rock Paper Scissors</h1>
+            <p>( じゃんけん )</p>
         </div>
+
+        <div class="row main-content">
+            <div class="col-md-4 text-center second-color">
+                <div class="container">
+                    <h1 class="mt-3" id="player1Name">Player 1</h1>
+                    <hr>
+
+                    <div id="p1-buttons">
+                        <button class="btn btn-primary p1-btn" value="Rock"><i class="far fa-hand-rock"></i>
+                            Rock</button>
+                        <button class="btn btn-primary p1-btn" value="Paper"><i class="far fa-hand-paper"></i>
+                            Paper</button>
+                        <button class="btn btn-primary p1-btn" value="Scissors"><i class="far fa-hand-scissors"></i>
+                            Scissors</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4 second-color">
+                <div id="waitingForPlayerDiv" class="py-5 my-5">
+                    <div class="row py-5 my-5">
+                        <div class="col-md-12 my-auto">
+                            <p class="text-center">Waiting For Player <span id="playerWaitingToJoin"></span> To Join</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="waitingForSelection" class="hide">
+                    <div class="row py-5 my-5">
+                        <div class="col-md-4 my-auto">
+                            <h1 class="playerChose text-center hide" id="player1Chose"><i
+                                    class="fas fa-check-square"></i></h1>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="text-center">Waiting For Both Players To Select</p>
+                        </div>
+                        <div class="col-md-4 my-auto">
+                            <h1 class="playerChose text-center hide" id="player2Chose"><i
+                                    class="fas fa-check-square"></i></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="countdownSection" class="hide py-5 my-5">
+                    <div class="row py-5 my-5">
+                        <div class="col-md-12 my-auto">
+                            <h1 class="text-center"><span id="timer"></span></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="roundResults" class="hide py-5 my-5">
+                    <div class="row py-5 my-5">
+                        <div class="col-md-12 my-auto">
+                            <h1 class="text-center"><i id="player1Selection"></i> VS. <i id="player2Selection"></i></h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 text-center second-color">
+                <div class="container">
+                    <h1 class="mt-3" id="player2Name">Player 2</h1>
+                    <hr>
+
+                    <div id="p2-buttons">
+                        <button class="btn btn-primary p2-btn" value="Rock"><i class="far fa-hand-rock"></i>
+                            Rock</button>
+                        <button class="btn btn-primary p2-btn" value="Paper"><i class="far fa-hand-paper"></i>
+                            Paper</button>
+                        <button class="btn btn-primary p2-btn" value="Scissors"><i class="far fa-hand-scissors"></i>
+                            Scissors</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </body>
+
+<!-- Firebase References -->
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./assets/javascript/game.js"></script>

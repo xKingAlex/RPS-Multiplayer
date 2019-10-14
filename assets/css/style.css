@@ -76,3 +76,38 @@ hr{
 }
 
 /* main game page */
+.main-header{
+    background-color: tomato;
+    color: white;
+}
+
+.main-content{
+    height: 350px;
+    margin: 0 auto;
+    font-family: 'Righteous', cursive;
+}
+
+.second-color{
+    background-color: cornsilk;
+}
+
+.btn-primary{
+    background: none;
+    border: none;
+    color: black;
+    font-size: 40px;
+    width: 100%;
+}
+
+.btn-primary:hover{
+    background-color: tomato;
+}
+
+.playerChose{
+    color: #228B22;
+}
+
+.hide{
+    display: none;
+}
+
